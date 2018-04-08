@@ -1,0 +1,23 @@
+{
+    "name": "jyxon/data-tools",
+    "description": "A simple library for data manipulation.",
+    "type": "library",
+    "homepage": "https://www.jyxon.com",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Jyxon",
+        "homepage": "https://www.jyxon.com"
+    }],
+    "require":
+    {
+        "php": "^7.0"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Jyxon\\DataTools\\": "src/"
+        }
+    }
+}
