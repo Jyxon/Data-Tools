@@ -19,5 +19,11 @@
         {
             "Jyxon\\DataTools\\": "src/"
         }
+    },
+    "archive":
+    {
+        "exclude": [
+            "/.gitignore"
+        ]
     }
 }

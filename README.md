@@ -189,13 +189,6 @@ The `ReflectorTool` adds the following functions:
 public function getType(): int;
 
 /**
- * Gets a list of interface names.
- *
- * @return bool|string[]
- */
-public function getInterfaceNames();
-
-/**
  * Fetches the constructor arguments.
  *
  * @return bool|ReflectionParameter[]
