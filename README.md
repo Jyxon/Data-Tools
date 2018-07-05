@@ -194,6 +194,15 @@ public function getType(): int;
  * @return bool|ReflectionParameter[]
  */
 public function getConstructorArgs();
+
+/**
+ * Fetches the arguments of a method.
+ *
+ * @param string $methodName
+ *
+ * @return bool|ReflectionParameter[]
+ */
+public function getMethodArguments(string $methodName);
 ```
 
 ### Operation

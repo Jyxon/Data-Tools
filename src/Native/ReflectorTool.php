@@ -103,11 +103,25 @@ class ReflectorTool extends ReflectionClass
     public function getConstructorArgs()
     {
         if ($this->isInstantiable()) {
-            if ($this->hasMethod('__construct')) {
-                $constructor = $this->getMethod('__construct');
-                if ($constructor->getNumberOfParameters() > 0) {
-                    return $constructor->getParameters();
-                }
+            return $this->getMethodArguments('__construct');
+        }
+
+        return false;
+    }
+
+    /**
+     * Fetches the arguments of a method.
+     *
+     * @param string $methodName
+     *
+     * @return bool|ReflectionParameter[]
+     */
+    public function getMethodArguments(string $methodName)
+    {
+        if ($this->hasMethod($methodName)) {
+            $method = $this->getMethod($methodName);
+            if ($method->getNumberOfParameters() > 0) {
+                return $method->getParameters();
             }
         }
 
